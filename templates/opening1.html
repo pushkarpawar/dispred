@@ -1,0 +1,52 @@
+<html>
+
+
+
+<head>
+	<title>Disease Prediction System</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	
+	
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1>Disease Prediction System</h1>
+				<br>
+				<p>Select the symptoms you think you might have and it will predict the disease or condition you could be suffering from.<br>
+				Then you could also look for hospitals/clinics for treatment.<br>
+			Finally your suggestions or comments in the comment box are always welcome.</p>
+			</div>
+		
+
+			<div class="col1">
+				<div class="card card1">
+					<h4><a href="{{ url_for('main1') }}">Select Symptoms</a></h4>
+					<!--<p>Select the symptoms you think you might have</p>-->
+				</div>
+
+				<div class="card card2">
+					<h4><a href="{{ url_for('main22') }}">Diagnosis & Treatment</a></h4>
+					<!--<p>Treatment and some medicines will be suggested for your disease/condition.</p>-->
+				</div>
+
+				<div class="card card3">
+					<h4><a href="{{ url_for('main3') }}">Hospitals</a></h4>
+					<!--<p>Hospitals treating your disease will be shown.</p>-->
+				</div>
+
+				<div class="card card4">
+					<h4><a href="{{ url_for('main4') }}">Comments</a></h4>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style4.css') }}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+<style>
+</style>
+
+<div id='background'>
+<head>
+      <title>Disease Prediction System</title>
+</head>
+<br>
+<div id="home">
+  <a href = "{{ url_for('main') }}"><i class="fas fa-home"> HOME</i></a>
+</div>
+<br>
+
+<h1>Comments/Suggestions</h1>
+<br>
+<h2>You can leave your feedback or mention your queries here.</h2>
+
+<br>
+</div>
+
+<div id="body1">
+<div id="form_comment">
+
+<form action="{{ url_for('main4') }}" id="usrform" method="POST">
+  Name: <input type="text" name="usrname">
+  
+<br>
+<br>
+
+  <textarea rows="4" cols="50" name="comment" form="usrform">
+Enter text here...</textarea>
+<br>
+<input type="submit">
+
+</form>
+<br>
+<br>
+</div>
+
+<div id="comments1">
+{% if usr_name %}
+
+{% for i in range (0,length) %}
+
+    <br>{{usr_name_list[i]}}: {{comment_list[i]}}<br>
+    <div id="border1">
+    </div>
+
+{% endfor %}
+
+
+{% endif %}
+</div>
+<br>
+<br>
+
+</div>
+</body>
+</html>
